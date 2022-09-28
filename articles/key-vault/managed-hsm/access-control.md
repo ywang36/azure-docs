@@ -27,7 +27,7 @@ Access to a managed HSM is controlled through two interfaces: the **management p
 To access a managed HSM in either plane, all callers must have proper authentication and authorization. Authentication establishes the identity of the caller. Authorization determines which operations the caller can execute. A caller can be any one of the [security principals](../../role-based-access-control/overview.md#security-principal) defined in Azure Active Directory - user, group, service principal or managed identity.
 
 Both planes use Azure Active Directory for authentication. For authorization they use different systems as follows
-- The management plane uses Azure role-based access control -- Azure RBAC -- an authorization system built on Azure Azure Resource Manager 
+- The management plane uses Azure role-based access control -- Azure RBAC -- an authorization system built on Azure Resource Manager 
 - The data plane uses a managed HSM-level RBAC (Managed HSM local RBAC) -- an authorization system implemented and enforced at the managed HSM level.
 
 When a managed HSM is created, the requestor also provides a list of data plane administrators (all [security principals](../../role-based-access-control/overview.md#security-principal) are supported). Only these administrators are able to access the managed HSM data plane to perform key operations and manage data plane role assignments (Managed HSM local RBAC).
